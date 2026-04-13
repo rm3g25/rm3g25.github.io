@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ilia Kuzmin — Senior Delphi Engineer</title>
+  <meta name="description" content="Senior Delphi Engineer with 20+ years in legacy modernization, Windows to Linux migration, and long-lived enterprise systems.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    :root{
+      --bg:#1e2235;--bg2:#181a2a;--bg3:#252942;--line:#2d3050;
+      --kw:#5b9bd5;--fn:#dcdcdc;--str:#d69d4e;--cm:#57a64a;
+      --dir:#9b9b9b;--txt:#dcdcdc;--txt2:#8a8fa8;--white:#f0f0f0;--acc:#5b9bd5;
+    }
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--txt);min-height:100vh;}
+    nav{position:sticky;top:0;background:var(--bg2);border-bottom:1px solid var(--line);z-index:100;padding:0 24px;}
+    .nav-inner{max-width:760px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:44px;}
+    .nav-logo{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--kw);font-weight:500;text-decoration:none;}
+    .nav-links{display:flex;gap:28px;}
+    .nav-links a{font-size:13px;color:var(--txt2);text-decoration:none;transition:color .15s;}
+    .nav-links a:hover{color:var(--txt);}
+    .wrap{max-width:760px;margin:0 auto;padding:0 24px 80px;}
+    section{padding:60px 0;border-bottom:1px solid var(--line);}
+    section:last-child{border-bottom:none;}
+    .sec-label{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cm);font-style:italic;margin-bottom:24px;letter-spacing:.02em;}
+    .hero{padding:72px 0 60px;}
+    .avail{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cm);margin-bottom:28px;font-style:italic;}
+    .avail-dot{width:6px;height:6px;background:var(--cm);border-radius:50%;animation:pulse 2.5s infinite;}
+    @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.3;}}
+    .hero h1{font-family:'Inter',sans-serif;font-size:42px;font-weight:300;line-height:1.2;color:var(--white);margin-bottom:14px;letter-spacing:-.01em;}
+    .hero h1 strong{font-weight:500;color:var(--str);}
+    .hero-sub{font-size:15px;color:var(--txt2);line-height:1.7;max-width:500px;margin-bottom:32px;font-weight:300;}
+    .hero-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:32px;}
+    .tag{font-family:'JetBrains Mono',monospace;font-size:11px;padding:4px 12px;border-radius:4px;border:1px solid var(--line);color:var(--dir);}
+    .btns{display:flex;gap:10px;flex-wrap:wrap;}
+    .btn{font-size:13px;font-weight:400;padding:9px 20px;border-radius:5px;border:1px solid var(--line);color:var(--txt2);background:var(--bg3);cursor:pointer;text-decoration:none;display:inline-block;transition:all .15s;}
+    .btn:hover{border-color:var(--acc);color:var(--txt);}
+    .btn.p{color:var(--kw);border-color:var(--kw);background:rgba(91,155,213,.07);}
+    .btn.p:hover{background:rgba(91,155,213,.14);}
+    .proof-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden;}
+    .proof-item{background:var(--bg2);padding:24px 26px;}
+    .proof-num{font-family:'JetBrains Mono',monospace;font-size:28px;color:var(--str);line-height:1;margin-bottom:6px;}
+    .proof-num small{font-size:15px;color:var(--acc);}
+    .proof-label{font-size:13px;color:var(--txt2);line-height:1.5;}
+    .about-text{font-size:15px;color:var(--txt);line-height:1.85;max-width:580px;font-weight:300;}
+    .about-text strong{font-weight:500;color:var(--str);}
+    .capsule-box{background:var(--bg2);border:1px solid var(--line);border-radius:6px;padding:28px 30px;}
+    .capsule-title{font-size:20px;font-weight:400;color:var(--white);margin-bottom:10px;}
+    .capsule-sub{font-size:14px;color:var(--txt2);line-height:1.7;margin-bottom:22px;font-weight:300;}
+    .capsule-prompt{font-family:'JetBrains Mono',monospace;font-size:12px;background:var(--bg);border:1px solid var(--line);border-left:2px solid var(--cm);border-radius:4px;padding:16px 20px;color:var(--txt);line-height:2;margin-bottom:22px;}
+    .capsule-prompt .c{color:var(--cm);font-style:italic;display:block;margin-bottom:2px;}
+    .capsule-prompt .s{color:var(--str);display:block;}
+    .projects{display:flex;flex-direction:column;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden;}
+    .proj{background:var(--bg2);padding:20px 26px;display:grid;grid-template-columns:1fr auto;gap:16px;align-items:start;transition:background .15s;}
+    .proj:hover{background:var(--bg3);}
+    .proj-name{font-size:14px;font-weight:500;color:var(--fn);margin-bottom:5px;}
+    .proj-desc{font-size:13px;color:var(--txt2);line-height:1.6;font-weight:300;}
+    .proj-tag{font-family:'JetBrains Mono',monospace;font-size:10px;padding:3px 10px;border-radius:3px;background:rgba(91,155,213,.08);color:var(--acc);border:1px solid rgba(91,155,213,.2);white-space:nowrap;}
+    .gh-link{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--acc);text-decoration:none;border:1px solid rgba(91,155,213,.2);border-radius:3px;padding:3px 10px;background:rgba(91,155,213,.05);transition:background .15s;}
+    .gh-link:hover{background:rgba(91,155,213,.12);}
+    .timeline{display:flex;flex-direction:column;}
+    .tl-item{display:grid;grid-template-columns:110px 1fr;gap:24px;padding:20px 0;border-bottom:1px solid var(--line);}
+    .tl-item:last-child{border-bottom:none;}
+    .tl-years{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--dir);padding-top:3px;}
+    .tl-company-wrap{position:relative;display:inline-block;}
+    .tl-name{font-size:14px;font-weight:500;color:var(--white);margin-bottom:4px;cursor:default;border-bottom:1px dashed var(--line);display:inline;transition:color .15s,border-color .15s;}
+    .tl-name:hover{border-bottom-color:var(--str);color:var(--str);}
+    .tooltip{position:absolute;left:0;top:calc(100% + 6px);background:var(--bg3);border:1px solid var(--line);border-radius:5px;padding:8px 14px;font-size:12px;color:var(--txt2);white-space:nowrap;z-index:10;opacity:0;pointer-events:none;transition:opacity .15s;font-family:'JetBrains Mono',monospace;}
+    .tl-company-wrap:hover .tooltip{opacity:1;}
+    .tl-role{font-size:13px;color:var(--txt2);margin-bottom:6px;font-weight:300;margin-top:6px;}
+    .tl-result{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cm);font-style:italic;}
+    .contact-note{font-size:14px;color:var(--txt2);font-weight:300;margin-bottom:20px;line-height:1.7;}
+    .contact-links{display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
+    .contact-phone{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--txt2);padding:9px 20px;border:1px solid var(--line);border-radius:5px;background:var(--bg3);user-select:all;}
+    @media(max-width:560px){
+      .hero h1{font-size:30px;}
+      .tl-item{grid-template-columns:1fr;gap:6px;}
+      .tl-years{padding-top:0;}
+      .proof-grid{grid-template-columns:1fr;}
+      .nav-links{gap:16px;}
+      .nav-links a{font-size:11px;}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="#hero">Ilia Kuzmin</a>
+    <div class="nav-links">
+      <a href="#proof">proof</a>
+      <a href="#projects">projects</a>
+      <a href="#path">career</a>
+      <a href="#capsule">capsule</a>
+      <a href="#contact">contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <section class="hero" id="hero">
+    <div class="avail"><div class="avail-dot"></div>// remote worldwide · open to relocation</div>
+    <h1>The engineer who keeps<br><strong>critical systems alive.</strong></h1>
+    <div class="hero-sub">Senior Delphi Engineer with 20+ years in legacy systems, long-term stability, and enterprise software that outlasts the teams who built it. I reduce bus factor, structure inherited knowledge, and make complex codebases survivable — for the next team and the next decade.</div>
+    <div class="hero-tags">
+      <span class="tag">Delphi / Object Pascal</span>
+      <span class="tag">Legacy Modernization</span>
+      <span class="tag">Long-Term Stability</span>
+      <span class="tag">Windows to Linux</span>
+      <span class="tag">FMX</span>
+      <span class="tag">LLM Integration</span>
+    </div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--dir);margin-bottom:24px;letter-spacing:.04em;">Ilia Kuzmin</div>
+    <div class="btns">
+      <a href="#projects" class="btn p">View my work</a>
+      <a href="#capsule" class="btn">Career Capsule</a>
+      <a href="https://www.linkedin.com/in/kusmin-ilia/" class="btn" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="Ilia-Kuzmin-CV.pdf" class="btn" target="_blank" rel="noopener">Resume</a>
+    </div>
+  </section>
+
+  <section id="proof">
+    <div class="sec-label">// proof — outcomes, not descriptions</div>
+    <div class="proof-grid">
+      <div class="proof-item">
+        <div class="proof-num">70<small>+</small></div>
+        <div class="proof-label">modules migrated Windows to Linux, near-solo</div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-num">300<small>k</small></div>
+        <div class="proof-label">beneficiaries served by a system built from scratch</div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-num">2000<small>+</small></div>
+        <div class="proof-label">sites launched on a platform I architected</div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-num">10<small>x</small></div>
+        <div class="proof-label">extreme-severity bugs fixed — unresolved for years before me</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="sec-label">// how I work</div>
+    <div class="about-text">
+      I specialize in systems other engineers avoid — deeply entangled, poorly documented, business-critical.<br><br>
+      When a team loses its only person who understood the codebase, I'm the one who comes in, reads the archaeology, and makes the system <strong>legible</strong> — for whoever comes next. I reduce bus factor structurally: by documenting decisions, isolating modules, and making inherited knowledge queryable — not just by me, but by the whole team.<br><br>
+      My pattern across 20 years is always the same: <strong>stability before speed</strong>. Legacy is not technical debt to apologize for. It is a competitive moat when you know how to work with it. I build things meant to last — and migrate them carefully when they need to move.
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="sec-label">// selected projects</div>
+    <div class="projects">
+      <div class="proj">
+        <div>
+          <div class="proj-name">TURBO — Windows to Linux Migration</div>
+          <div class="proj-desc">Enterprise ERP desktop, one of the oldest in Eastern Europe. 1M+ lines of code. 70+ modules and 10 visual components migrated near-solo. PDF export pipeline rebuilt across 3 system layers. Extreme-severity bugs resolved that had been open for years.</div>
+        </div>
+        <div class="proj-tag">FMX · Linux</div>
+      </div>
+      <div class="proj">
+        <div>
+          <div class="proj-name">Benefits Monetization System</div>
+          <div class="proj-desc">A regional social welfare platform serving 300–400k beneficiaries. Built from scratch including full dBase to Firebird migration. Authored technical documentation for long-term maintainability.</div>
+        </div>
+        <div class="proj-tag">Regional scale</div>
+      </div>
+      <div class="proj">
+        <div>
+          <div class="proj-name">Site Factory Platform</div>
+          <div class="proj-desc">Architected a content automation system that launched 2000+ sites and contributed $2M+ in estimated revenue. Maintained as team foundation for 10+ years in production.</div>
+        </div>
+        <div class="proj-tag">10yr production</div>
+      </div>
+      <div class="proj">
+        <div>
+          <div class="proj-name">Agentic Coding Loop in Delphi</div>
+          <div class="proj-desc">Working generate→review→refine agent inside RAD Studio using Ollama and Claude API. First known implementation in the Delphi ecosystem. Published in English and Russian.</div>
+          <a href="https://github.com/rm3g25/delphi-loop" target="_blank" rel="noopener" class="gh-link">
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            View on GitHub · <span id="gh-stars">...</span>
+          </a>
+        </div>
+        <div class="proj-tag">LLM + Delphi</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="path">
+    <div class="sec-label">// career path</div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-years">2022 – now</div>
+        <div>
+          <div class="tl-company-wrap">
+            <span class="tl-name">One of the oldest ERP platforms in Eastern Europe</span>
+            <div class="tooltip">Consyst Business Group</div>
+          </div>
+          <div class="tl-role">Senior Delphi Engineer</div>
+          <div class="tl-result">// legacy modernization · Windows to Linux · 100+ bugs resolved</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-years">2012 – 2022</div>
+        <div>
+          <div class="tl-company-wrap">
+            <span class="tl-name">One of the top 10 largest ad targeting platforms worldwide</span>
+            <div class="tooltip">Adonweb</div>
+          </div>
+          <div class="tl-role">Senior Engineer / Project Manager</div>
+          <div class="tl-result">// 2000+ sites · $2M+ revenue · 10 years in production</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-years">2008 – 2012</div>
+        <div>
+          <div class="tl-company-wrap">
+            <span class="tl-name">A regional social welfare platform serving 300–400k people</span>
+            <div class="tooltip">SocTechService</div>
+          </div>
+          <div class="tl-role">Lead Delphi Developer</div>
+          <div class="tl-result">// built from scratch · dBase to Firebird migration</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-years">2006 – 2008</div>
+        <div>
+          <div class="tl-company-wrap">
+            <span class="tl-name">Desktop software house</span>
+            <div class="tooltip">CJSC Logos</div>
+          </div>
+          <div class="tl-role">Delphi Software Developer</div>
+          <div class="tl-result">// desktop modules · DLL development · MS Office integration</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="capsule">
+    <div class="sec-label">// career capsule</div>
+    <div class="capsule-box">
+      <div class="capsule-title">Not a CV. A source of truth.</div>
+      <div class="capsule-sub">A structured file built for LLMs and ATS. Download it, drop into ChatGPT or Claude, ask anything — from fit assessment to tailored CV generation.</div>
+      <div class="capsule-prompt">
+        <span class="c">// try asking:</span>
+        <span class="s">"What are this candidate's strongest signals?"</span>
+        <span class="s">"Generate a CV for a Linux migration role in Germany."</span>
+        <span class="s">"Would Ilia fit a team migrating a 15-year-old ERP?"</span>
+      </div>
+      <div class="btns">
+        <a href="https://github.com/rm3g25/career-capsule/blob/master/Ilia-Kuzmin-delphi-developer.CareerCapsule.md" class="btn p" target="_blank" rel="noopener">Download from GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="sec-label">// contact</div>
+    <div class="contact-note">Open to senior and lead roles — remote worldwide or relocation to EU. Requires work sponsorship.</div>
+    <div class="contact-links">
+      <a href="mailto:kusminilia@gmail.com" class="btn p">kusminilia@gmail.com</a>
+      <a href="https://www.linkedin.com/in/kusmin-ilia/" class="btn" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/rm3g25/career-capsule" class="btn" target="_blank" rel="noopener">GitHub</a>
+      <div class="contact-phone">+386 69 696 495</div>
+      <a href="Ilia-Kuzmin-CV.pdf" class="btn" target="_blank" rel="noopener">Resume</a>
+    </div>
+  </section>
+
+</div>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var id = a.getAttribute('href');
+      if(id === '#') return;
+      e.preventDefault();
+      var t = document.querySelector(id);
+      if(t) t.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+  });
+
+  fetch('https://api.github.com/repos/rm3g25/delphi-loop')
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      var el = document.getElementById('gh-stars');
+      if(el && d.stargazers_count !== undefined){
+        el.textContent = '★ '
