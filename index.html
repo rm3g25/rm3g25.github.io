@@ -290,4 +290,15 @@
     .then(function(d){
       var el = document.getElementById('gh-stars');
       if(el && d.stargazers_count !== undefined){
-        el.textContent = '★ '
+          el.textContent = '★ ' + d.stargazers_count;
+        } else if(el) {
+          el.textContent = 'GitHub';
+        }
+      })
+      .catch(function(){ 
+        var el = document.getElementById('gh-stars');
+        if(el) el.textContent = 'GitHub';
+      });
+  </script>
+</body>
+</html>
